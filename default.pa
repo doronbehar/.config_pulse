@@ -112,7 +112,9 @@ load-module module-always-sink
 load-module module-intended-roles
 
 ### Automatically suspend sinks/sources that become idle for too long
+.ifexists /home/doron/.local/share/pulse/iface-enp0s25-is-up
 load-module module-suspend-on-idle
+.endif
 
 # automatically switch to newly-connected devices
 load-module module-switch-on-connect
